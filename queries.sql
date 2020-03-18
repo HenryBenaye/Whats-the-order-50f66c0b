@@ -1,32 +1,16 @@
-select naam
-from films
-where has_won_awards >= 1 ;
-
 select naam 
 from films
-where rating >= 2.5;
+where rating > 2.5
+order by naam desc;
 
 select naam
 from films 
-where country = "NL";
-
-select naam
-from films
-where seasons <= 5;
+where seasons < 5
+order by naam asc;
 
 select naam
 from films
-where seasons < 3 || seasons > 20;
+where seasons < 3 or seasons > 20
+order by seasons && country desc;
 
-select naam
-from films 
-where naam like '%Th%';
-
-select naam 
-from films 
-where seasons != 3;
-
-select naam 
-from films 
-order by rating desc;
 
